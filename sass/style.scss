@@ -1,0 +1,128 @@
+// mixins
+
+@mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin center-left {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+@mixin center-right {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+// reset geenral settings
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: #333;
+    font-size: 1.6rem;
+}
+
+// header
+
+.header {
+    margin-bottom: 3rem;
+    
+    &__nav {
+        border-bottom: 2px solid #222;
+        padding: 1rem 3rem;
+        height: 12rem;
+        position: relative;
+    }
+
+    &__logo {
+        @include center-left;
+        height: 10rem;
+        width: auto;
+        margin-left: 5rem;
+    }
+
+    &__buttons {
+        @include center-right;
+        margin-right: 5rem;
+    }
+
+    &__button {
+
+        &:link,
+        &:visited {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 2rem;
+            color: #eee;
+            padding-bottom: 2px;
+            border-bottom: 2px solid transparent;
+            display: inline-block;
+            transition: all .2s;
+        }
+
+        &:not(:last-child) {
+            margin-right: 3rem;
+        }
+
+        &:hover {
+            border-bottom: 2px solid #eee;
+        }
+
+        &:active {
+            transform: translateY(2px);
+        }
+    }
+
+    &__bookmarks {
+        padding: 0 3rem;
+    }
+
+    &__bookmark {
+
+        &:first-child {
+            clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+        }
+
+        &:not(:first-child) {
+            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+            transform: translateX(-10%);
+        }
+
+        &:link,
+        &:visited {
+            display: inline-block;
+            padding: 1rem 3rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 2rem;
+            color: #eee;
+            background-color: #444;
+            transition: all .2s;
+        }
+
+        &:hover {
+            background-color: rgb(78, 78, 78);
+        }
+
+        &:active {
+            background-color: rgb(58, 58, 58);
+        }
+    }
+}
