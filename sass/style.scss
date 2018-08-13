@@ -126,3 +126,26 @@ body {
         }
     }
 }
+
+// main
+
+.content-window {
+    display: table;
+    width: 100%;
+    padding: 3rem;
+}
+
+.user-window {
+    display: table-cell;
+    width: 66.6667%;
+    background-color: #fff;
+    border-right: 5px solid #333;
+    padding: 2rem;
+}
+
+.dialogue-window {
+    display: table-cell;
+    width: 33.3333%;
+    background-color: #fff;
+    padding: 2rem;
+}
