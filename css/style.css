@@ -85,3 +85,9 @@ body {
   width: 33.3333%;
   background-color: #fff;
   padding: 2rem; }
+
+.character__basic {
+  width: 100%;
+  border: 1px solid black; }
+  .character__basic td {
+    border: 1px solid black; }

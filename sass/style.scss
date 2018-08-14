@@ -127,7 +127,7 @@ body {
     }
 }
 
-// main
+// main layout
 
 .content-window {
     display: table;
@@ -148,4 +148,18 @@ body {
     width: 33.3333%;
     background-color: #fff;
     padding: 2rem;
+}
+
+// character
+
+.character {
+
+    &__basic {
+        width: 100%;
+        border: 1px solid black;
+
+        & td {
+            border: 1px solid black;
+        }
+    }
 }
