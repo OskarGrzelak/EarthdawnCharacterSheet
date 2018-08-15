@@ -39,6 +39,24 @@ body {
     font-size: 1.6rem;
 }
 
+// utilities
+
+.list {
+    list-style: none;
+}
+
+.value {
+    display: inline-block;
+}
+
+.step {
+    display: inline-block;
+}
+
+.roll {
+    display: inline-block;
+}
+
 // header
 
 .header {
@@ -137,7 +155,7 @@ body {
 
 .user-window {
     display: table-cell;
-    width: 66.6667%;
+    width: 75%;
     background-color: #fff;
     border-right: 5px solid #333;
     padding: 2rem;
@@ -145,7 +163,7 @@ body {
 
 .dialogue-window {
     display: table-cell;
-    width: 33.3333%;
+    width: 25%;
     background-color: #fff;
     padding: 2rem;
 }
@@ -154,12 +172,49 @@ body {
 
 .character {
 
-    &__basic {
-        width: 100%;
-        border: 1px solid black;
+    &__section {
+        float: left;
+        width: 33%;
+        border: 2px solid #333;
+        margin: 1px;
+    }
 
-        & td {
-            border: 1px solid black;
+    &__heading {
+        background-color: #333;
+    }
+
+    &__title {
+        color: #eee;
+        font-size: 2rem;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__info-box {
+        padding: 1rem;
+    }
+
+    &__info {
+        
+        &:not(:last-child) {
+            margin-bottom: .5rem;
         }
+    }
+
+    &__input {
+        border: none;
+        box-shadow: 0 1px 1px 0 rgba(78, 78, 78, 0.8);
+
+        &[type='number'] {
+            width: 4rem;
+        }
+
+        &[type='text'] {
+            width: 8rem;
+        }
+    }
+
+    &__label {
+        text-transform: uppercase;
     }
 }

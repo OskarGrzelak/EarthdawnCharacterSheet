@@ -27,125 +27,152 @@
     <div class="content-window">
         <div class="user-window">
             <div class="character">
-                <div class="character__basic-info">
-                    <h2 class="character__title">Basic information</h2>
-                    <div class="character__info">
-                        <label for="char-name">Name:</label>
-                        <input type="text" id="char-name" value="Grund">
+                <div class="character__section">
+                    <div class="character__section--basic-info">
+                        <div class="character__heading">
+                            <h2 class="character__title">Basic information</h2>
+                        </div>
+                        <div class="character__info-box">
+                            <div class="character__info">
+                                <label class="character__label" for="char-name">Name:</label>
+                                <input class="character__input" type="text" id="char-name" value="Grund">
+                            </div>
+                            <div class="character__info">
+                                <label class="character__label" for="char-race">Race:</label>
+                                <input class="character__input" type="text" id="char-race" value="Ork">
+                                <label class="character__label" for="char-passion">Passion:</label>
+                                <input class="character__input" type="text" id="char-passion" value="Lochost">
+                            </div>
+                            <div class="character__info">
+                                <label class="character__label" for="char-gender">Gender:</label>
+                                <input class="character__input" type="text" id="char-gender" value="M">
+                                <label class="character__label" for="char-age">Age:</label>
+                                <input class="character__input" type="number" id="char-age" value="21">
+                            </div>
+                            <div class="character__info">
+                                <label class="character__label" for="char-height">Height:</label>
+                                <input class="character__input" type="number" id="char-height" value="195">
+                                <label class="character__label" for="char-weight">Weight:</label>
+                                <input class="character__input" type="number" id="char-weight" value="85">
+                            </div>
+                        </div>
                     </div>
-                    <div class="character__info">
-                        <label for="char-race">Race:</label>
-                        <input type="text" id="char-race" value="Ork">
-                        <label for="char-passion">Passion:</label>
-                        <input type="text" id="char-passion" value="Lochost">
+                    <div class="character__section--discipline">
+                        <div class="character__heading">
+                            <h2 class="character__title">Discipline</h2>
+                        </div>
+                        <div class="character__info-box">
+                            <div class="character__info">
+                                <label class="character__label" for="char-discipline">Discipline:</label>
+                                <input class="character__input" type="text" id="char-weight" value="Wyzwoliciel">
+                                <label class="character__label" for="char-circle">Circle:</label>
+                                <input class="character__input" type="number" id="char-circle" value="1">
+                            </div>
+                        </div>
                     </div>
-                    <div class="character__info">
-                        <label for="char-gender">Gender:</label>
-                        <input type="text" id="char-gender" value="M">
-                        <label for="char-age">Age:</label>
-                        <input type="text" id="char-age" value="21">
-                    </div>
-                    <div class="character__info">
-                        <label for="char-height">Height:</label>
-                        <input type="text" id="char-height" value="195">
-                        <label for="char-weight">Weight:</label>
-                        <input type="text" id="char-weight" value="85">
-                    </div>
-                    <div class="character__info">
-                        <label for="char-discipline">Discipline:</label>
-                        <input type="text" id="char-weight" value="Wyzwoliciel">
-                        <label for="char-circle">Circle:</label>
-                        <input type="text" id="char-circle" value="1">
-                    </div>
-                    <div class="character__info">
-                        <p>Legend points</p>
-                        <label for="char-weight">Current:</label>
-                        <input type="text" id="char-weight">
-                        <label for="char-discipline">Total:</label>
-                        <input type="text" id="char-weight">
+                    <div class="character__section--legend-points">
+                        <div class="character__heading">
+                            <h2 class="character__title">Legend points</h2>
+                        </div>
+                        <div class="character__info-box">
+                            <div class="character__info">
+                                <label class="character__label" for="char-weight">Current:</label>
+                                <input class="character__input" type="text" id="char-weight">
+                                <label class="character__label" for="char-discipline">Total:</label>
+                                <input class="character__input" type="text" id="char-weight">
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="character__attributes">
-                    <h2 class="character__title">Attributes</h2>
-                    <h3 class="character__subtitle">Physical</h3>
-                    <ul>
-                        <li>
-                            <h4>Dexterity</h4>
-                            <div class="value">14</div>
-                            <div class="step">6</div>
-                            <div class="roll">roll</div>
-                        </li>
-                        <li>
-                            <h4>Strength</h4>
-                            <div class="value">15</div>
-                            <div class="step">6</div>
-                            <div class="roll">roll</div>
-                        </li>
-                        <li>
-                            <h4>Toughness</h4>
-                            <div class="value">14</div>
-                            <div class="step">6</div>
-                            <div class="roll">roll</div>
-                        </li>
-                    </ul>
-                    <h3 class="character__subtitle">Mental</h3>
-                    <ul>
-                        <li>
-                            <h4>Perception</h4>
-                            <div class="value">12</div>
-                            <div class="step">5</div>
-                            <div class="roll">roll</div>
-                        </li>
-                        <li>
-                            <h4>willpower</h4>
-                            <div class="value">14</div>
-                            <div class="step">6</div>
-                            <div class="roll">roll</div>
-                        </li>
-                        <li>
-                            <h4>Charisma</h4>
-                            <div class="value">9</div>
-                            <div class="step">4</div>
-                            <div class="roll">roll</div>
-                        </li>
-                    </ul>
+                <div class="character__section character__section--attributes">
+                    <div class="character__heading">
+                        <h2 class="character__title">Attributes</h2>
+                    </div>
+                    <div class="character__info-box">
+                        <h3 class="character__subtitle">Physical</h3>
+                        <ul class="list">
+                            <li>
+                                <h4>Dexterity</h4>
+                                <div class="value">14</div>
+                                <div class="step">6</div>
+                                <div class="roll">roll</div>
+                            </li>
+                            <li>
+                                <h4>Strength</h4>
+                                <div class="value">15</div>
+                                <div class="step">6</div>
+                                <div class="roll">roll</div>
+                            </li>
+                            <li>
+                                <h4>Toughness</h4>
+                                <div class="value">14</div>
+                                <div class="step">6</div>
+                                <div class="roll">roll</div>
+                            </li>
+                        </ul>
+                        <h3 class="character__subtitle">Mental</h3>
+                        <ul class="list">
+                            <li>
+                                <h4>Perception</h4>
+                                <div class="value">12</div>
+                                <div class="step">5</div>
+                                <div class="roll">roll</div>
+                            </li>
+                            <li>
+                                <h4>willpower</h4>
+                                <div class="value">14</div>
+                                <div class="step">6</div>
+                                <div class="roll">roll</div>
+                            </li>
+                            <li>
+                                <h4>Charisma</h4>
+                                <div class="value">9</div>
+                                <div class="step">4</div>
+                                <div class="roll">roll</div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="character__characteristics">
-                    <h2 class="character__title">Characteristics</h2>
-                    <ul>
-                        <li>
-                            <div class="defense"><p>Physical defense <span class="value">9</span></p></div>
-                            <div class="defense"><p>Spell defense <span class="value">7</span></p></div>
-                            <div class="defense"><p>Social defense <span class="value">6</span></p></div>
-                        </li>
-                        <li>
-                            <div class="armour"><p>Phisical armour <span class="value">4</span></p></div>
-                            <div class="armour"><p>Mental armour <span class="value">2</span></p></div>
-                        </li>
-                        <li>
-                            <div class="health"><p>Wound threshold <span class="value">10</span></p></div>
-                            <div class="health"><p>Unconsciousness <span class="value">28</span></p></div>
-                            <div class="health"><p>Death <span class="value">36</span></p></div>
-                        </li>
-                        <li>
-                            <div class="damages"><p>Current damages <span class="value">0</span></p></div>
-                            <div class="damages"><p>Wounds <span class="value">0</span></p></div>
-                        </li>
-                        <li>
-                            <div class="recovery"><p>Recovery tests <span class="value">3</span></p></div>
-                            <div class="roll">roll</div>
-                        </li>
-                        <li>
-                            <div class="speed"><p>Movement rate <span class="value">75/38</span></p></div>
-                        </li>
-                        <li>
-                            <div class="carrying"><p>Carrying capacity <span class="value">70/140</span></p></div>
-                        </li>
-                        <li>
-                            <div class="initiative"><p>Initiative <span class="value">6</span></p></div>
-                            <div class="roll">roll</div>
-                        </li>
-                    </ul>
+                <div class="character__section character__section--characteristics">
+                    <div class="character__heading">
+                        <h2 class="character__title">Characteristics</h2>
+                    </div>
+                    <div class="character__info-box">
+                        <ul class="list">
+                            <li>
+                                <div class="defense"><p>Physical defense <span class="value">9</span></p></div>
+                                <div class="defense"><p>Spell defense <span class="value">7</span></p></div>
+                                <div class="defense"><p>Social defense <span class="value">6</span></p></div>
+                            </li>
+                            <li>
+                                <div class="armour"><p>Phisical armour <span class="value">4</span></p></div>
+                                <div class="armour"><p>Mental armour <span class="value">2</span></p></div>
+                            </li>
+                            <li>
+                                <div class="health"><p>Wound threshold <span class="value">10</span></p></div>
+                                <div class="health"><p>Unconsciousness <span class="value">28</span></p></div>
+                                <div class="health"><p>Death <span class="value">36</span></p></div>
+                            </li>
+                            <li>
+                                <div class="damages"><p>Current damages <span class="value">0</span></p></div>
+                                <div class="damages"><p>Wounds <span class="value">0</span></p></div>
+                            </li>
+                            <li>
+                                <div class="recovery"><p>Recovery tests <span class="value">3</span></p></div>
+                                <div class="roll">roll</div>
+                            </li>
+                            <li>
+                                <div class="speed"><p>Movement rate <span class="value">75/38</span></p></div>
+                            </li>
+                            <li>
+                                <div class="carrying"><p>Carrying capacity <span class="value">70/140</span></p></div>
+                            </li>
+                            <li>
+                                <div class="initiative"><p>Initiative <span class="value">6</span></p></div>
+                                <div class="roll">roll</div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                     
             </div>
