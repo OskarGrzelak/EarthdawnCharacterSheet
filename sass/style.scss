@@ -43,18 +43,59 @@ body {
 
 .list {
     list-style: none;
+
+    &:not(:last-child) {
+        margin-bottom: 1rem;
+    }
 }
 
-.value {
+.item {
+
+    &:not(:last-child) {
+        margin-bottom: .5rem;
+    }
+}
+
+.details {
+    float: right;
+}
+
+.value,
+.step,
+.roll {
     display: inline-block;
 }
 
+.value,
 .step {
-    display: inline-block;
+    font-size: 1.8rem;
+    margin-right: 2rem;
 }
 
 .roll {
+    text-transform: uppercase;
+    border-bottom: 1px solid #333;
+    cursor: default;
+}
+
+//typography
+
+.title {
+    color: #eee;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+}
+
+.attribute-name {
     display: inline-block;
+    text-transform: uppercase;
 }
 
 // header
@@ -174,20 +215,21 @@ body {
 
     &__section {
         float: left;
-        width: 33%;
+        width: 35%;
         border: 2px solid #333;
         margin: 1px;
+
+        &--attributes {
+            width: 29%;
+        }
+
+        &--characteristics {
+            width: 35%;
+        }
     }
 
     &__heading {
         background-color: #333;
-    }
-
-    &__title {
-        color: #eee;
-        font-size: 2rem;
-        text-transform: uppercase;
-        text-align: center;
     }
 
     &__info-box {
