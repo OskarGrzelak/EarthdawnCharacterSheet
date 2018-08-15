@@ -28,33 +28,34 @@
         <div class="user-window">
             <div class="character">
                 <div class="character__basic-info">
+                    <h2 class="character__title">Basic information</h2>
                     <div class="character__info">
                         <label for="char-name">Name:</label>
-                        <input type="text" id="char-name">
+                        <input type="text" id="char-name" value="Grund">
                     </div>
                     <div class="character__info">
                         <label for="char-race">Race:</label>
-                        <input type="text" id="char-race">
+                        <input type="text" id="char-race" value="Ork">
                         <label for="char-passion">Passion:</label>
-                        <input type="text" id="char-passion">
+                        <input type="text" id="char-passion" value="Lochost">
                     </div>
                     <div class="character__info">
                         <label for="char-gender">Gender:</label>
-                        <input type="text" id="char-gender">
+                        <input type="text" id="char-gender" value="M">
                         <label for="char-age">Age:</label>
-                        <input type="text" id="char-age">
+                        <input type="text" id="char-age" value="21">
                     </div>
                     <div class="character__info">
                         <label for="char-height">Height:</label>
-                        <input type="text" id="char-height">
+                        <input type="text" id="char-height" value="195">
                         <label for="char-weight">Weight:</label>
-                        <input type="text" id="char-weight">
+                        <input type="text" id="char-weight" value="85">
                     </div>
                     <div class="character__info">
                         <label for="char-discipline">Discipline:</label>
-                        <input type="text" id="char-weight">
+                        <input type="text" id="char-weight" value="Wyzwoliciel">
                         <label for="char-circle">Circle:</label>
-                        <input type="text" id="char-circle">
+                        <input type="text" id="char-circle" value="1">
                     </div>
                     <div class="character__info">
                         <p>Legend points</p>
@@ -65,60 +66,54 @@
                     </div>
                 </div>
                 <div class="character__attributes">
+                    <h2 class="character__title">Attributes</h2>
+                    <h3 class="character__subtitle">Physical</h3>
+                    <ul>
+                        <li>
+                            <h4>Dexterity</h4>
+                            <div class="value">14</div>
+                            <div class="step">6</div>
+                            <div class="roll">roll</div>
+                        </li>
+                        <li>
+                            <h4>Strength</h4>
+                            <div class="value">15</div>
+                            <div class="step">6</div>
+                            <div class="roll">roll</div>
+                        </li>
+                        <li>
+                            <h4>Toughness</h4>
+                            <div class="value">14</div>
+                            <div class="step">6</div>
+                            <div class="roll">roll</div>
+                        </li>
+                    </ul>
+                    <h3 class="character__subtitle">Mental</h3>
+                    <ul>
+                        <li>
+                            <h4>Perception</h4>
+                            <div class="value">12</div>
+                            <div class="step">5</div>
+                            <div class="roll">roll</div>
+                        </li>
+                        <li>
+                            <h4>willpower</h4>
+                            <div class="value">14</div>
+                            <div class="step">6</div>
+                            <div class="roll">roll</div>
+                        </li>
+                        <li>
+                            <h4>Charisma</h4>
+                            <div class="value">9</div>
+                            <div class="step">4</div>
+                            <div class="roll">roll</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="character__characteristics">
                     
                 </div>
-                    <!-- <table class="character__basic">
-                            <thead>
-                                <tr class="tableizer-firstrow">
-                                    <th colspan="4">Basic information</th>
-                                    <th colspan="5">Attributes</th>
-                                    <th colspan="3">Characteristics</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Name:</td>
-                                    <td colspan="3"><input type="text" class="character__name-input"></td>
-                                    <td>Physical</td>
-                                    <td>value</td>
-                                    <td>step</td>
-                                    <td>Roll</td>
-                                    <td>expand</td>
-                                    <td>defences</td>
-                                    <td colspan="2">&nbsp;</td>
-                                </tr>
-                                <tr>
-                                    <td>Race:</td>
-                                    <td><input type="text" class="character__input"></td>
-                                    <td>Passion:</td>
-                                    <td><input type="text" class="character__input"></td>
-                                    <td>Dexterity</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>armours</td><td colspan="2">&nbsp;</td>
-                                </tr>
-                                <tr>
-                                    <td>Gender:</td>
-                                    <td><input type="text" class="character__input"></td>
-                                    <td>Age:</td>
-                                    <td><input type="text" class="character__input"></td>
-                                    <td>Strength</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>Wound threshold</td>
-                                    <td colspan="2">&nbsp;</td>
-                                </tr>
-                             <tr><td>Height:</td><td>&nbsp;</td><td>Weight:</td><td>&nbsp;</td><td>Toughness</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Unconsciousness</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-                             <tr><td>Description:</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>death</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-                             <tr><td>Discipline</td><td>&nbsp;</td><td>&nbsp;</td><td>Circle</td><td>Mental</td><td>value</td><td>step</td><td>Roll</td><td>expand</td><td>current damage</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-                             <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Perception</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>wounds</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-                             <tr><td>Legend points</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Will power</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Blood magic</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-                             <tr><td>Current:</td><td>&nbsp;</td><td>Total:</td><td>&nbsp;</td><td>Charisma</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>recovery tests</td><td>&nbsp;</td><td>roll</td></tr>
-                            </tbody></table> -->
+                    
             </div>
             <div class="equipment">
         
