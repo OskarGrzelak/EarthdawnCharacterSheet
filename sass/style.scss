@@ -56,7 +56,7 @@ body {
     }
 }
 
-.details {
+.values {
     float: right;
 }
 
@@ -64,12 +64,12 @@ body {
 .step,
 .roll {
     display: inline-block;
+    margin-left: 1.5rem;
 }
 
 .value,
 .step {
     font-size: 1.8rem;
-    margin-right: 2rem;
 }
 
 .roll {
@@ -189,13 +189,14 @@ body {
 // main layout
 
 .content-window {
-    display: table;
+    //display: table;
     width: 100%;
     padding: 3rem;
 }
 
 .user-window {
-    display: table-cell;
+    //display: table-cell;
+    float: left;
     width: 75%;
     background-color: #fff;
     border-right: 5px solid #333;
@@ -203,8 +204,10 @@ body {
 }
 
 .dialogue-window {
-    display: table-cell;
+    //display: table-cell;
+    float: left;
     width: 25%;
+    min-height: 100vh;
     background-color: #fff;
     padding: 2rem;
 }
@@ -215,7 +218,7 @@ body {
 
     &__section {
         float: left;
-        width: 35%;
+        width: 40%;
         border: 2px solid #333;
         margin: 1px;
 
@@ -224,7 +227,7 @@ body {
         }
 
         &--characteristics {
-            width: 35%;
+            width: 30%;
         }
     }
 
