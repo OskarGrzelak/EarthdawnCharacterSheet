@@ -27,7 +27,7 @@
     <div class="content-window">
         <div class="user-window">
             <div class="character">
-                <div class="character__section">
+                <div class="character__section character__section--info">
                     <div class="character__section--basic-info">
                         <div class="character__heading">
                             <h2 class="title">Basic information</h2>
@@ -162,7 +162,7 @@
                         <h3 class="subtitle">armours</h3>
                         <ul class="list">
                             <li class="item">
-                                <p class="attribute-name">Phisical: </p>
+                                <p class="attribute-name">Physical: </p>
                                 <div class="values value">4</div>
                             </li>
                             <li class="item">
@@ -213,8 +213,65 @@
                             </li>
                         </ul>
                     </div>
+                </div> 
+                <div class="character__section character__section--karma">
+                    <div class="character__heading">
+                        <h2 class="title">Karma</h2>
+                    </div>
+                    <div class="character__info-box">
+                        <div class="character__feature">
+                            <p class="attribute-name">Current: </p>
+                            <div class="value">10</div>
+                        </div>
+                        <div class="character__feature">
+                            <p class="attribute-name">Maximum: </p>
+                            <div class="value">40</div>
+                        </div>
+                        <div class="character__feature">
+                            <p class="attribute-name">Cost: </p>
+                            <div class="value">7</div>
+                        </div>
+                        <div class="character__feature">
+                            <p class="attribute-name">Dice: </p>
+                            <div class="value">d8</div>
+                        </div>
+                    </div>
                 </div>
-                    
+                <div class="character__section character__section--weapon-damage">
+                    <div class="character__heading">
+                        <h2 class="title">Weapon damage</h2>
+                    </div>
+                    <div class="character__info-box">
+                        <h3 class="subtitle">Melee weapon</h3>
+                        <div class="character__feature">
+                            <label class="character__label" for="first-weapon-name">Weapon name:</label>
+                            <input class="character__input" type="text" id="first-weapon-name" value="Maczuga">
+                        </div>
+                        <div class="character__feature">
+                            <label class="character__label" for="first-weapon-strength">Weapon strength:</label>
+                            <input class="character__input" type="number" id="first-weapon-strength" value="6">
+                        </div>
+                        <div class="character__feature">
+                            <p class="attribute-name">Damage: </p>
+                            <div class="value">12</div>
+                        </div>
+                    </div>
+                    <div class="character__info-box">
+                        <h3 class="subtitle">Distance weapon</h3>
+                        <div class="character__feature">
+                            <label class="character__label" for="second-weapon-name">Weapon name:</label>
+                            <input class="character__input" type="text" id="second-weapon-name" value="Łuk">
+                        </div>
+                        <div class="character__feature">
+                            <label class="character__label" for="second-weapon-strength">Weapon strength:</label>
+                            <input class="character__input" type="number" id="second-weapon-strength" value="7">
+                        </div>
+                        <div class="character__feature">
+                            <p class="attribute-name">Damage: </p>
+                            <div class="value">13</div>
+                        </div>
+                    </div>
+                </div>      
             </div>
             <div class="equipment">
         

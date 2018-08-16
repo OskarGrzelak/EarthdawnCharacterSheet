@@ -130,12 +130,25 @@ body {
 .character__section {
   float: left;
   width: 40%;
-  border: 2px solid #333;
-  margin: 1px; }
+  border: 2px solid #333; }
+  .character__section--info {
+    height: 26rem;
+    margin-right: 3px; }
   .character__section--attributes {
-    width: 29%; }
+    width: 26%;
+    height: 26rem;
+    margin-right: 3px; }
   .character__section--characteristics {
-    width: 30%; }
+    width: 33%;
+    height: 50rem; }
+  .character__section--karma {
+    width: 66.2%;
+    margin-top: -23.5rem;
+    height: 6.5rem; }
+  .character__section--weapon-damage {
+    width: 66.2%;
+    margin-top: -16.5rem;
+    height: 16.5rem; }
 
 .character__heading {
   background-color: #333; }
@@ -156,3 +169,8 @@ body {
 
 .character__label {
   text-transform: uppercase; }
+
+.character__feature {
+  display: inline-block; }
+  .character__feature:not(:last-child) {
+    margin-right: 3rem; }

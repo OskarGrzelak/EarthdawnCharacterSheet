@@ -220,14 +220,33 @@ body {
         float: left;
         width: 40%;
         border: 2px solid #333;
-        margin: 1px;
+
+        &--info {
+            height: 26rem;
+            margin-right: 3px;
+        }
 
         &--attributes {
-            width: 29%;
+            width: 26%;
+            height: 26rem;
+            margin-right: 3px;
         }
 
         &--characteristics {
-            width: 30%;
+            width: 33%;
+            height: 50rem;
+        }
+
+        &--karma {
+            width: 66.2%;
+            margin-top: -23.5rem;
+            height: 6.5rem;
+        }
+
+        &--weapon-damage {
+            width: 66.2%;
+            margin-top: -16.5rem;
+            height: 16.5rem;
         }
     }
 
@@ -261,5 +280,13 @@ body {
 
     &__label {
         text-transform: uppercase;
+    }
+
+    &__feature {
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-right: 3rem;
+        }
     }
 }
