@@ -37,6 +37,11 @@ body {
   border-bottom: 1px solid #333;
   cursor: default; }
 
+.table {
+  width: 100%;
+  text-align: left;
+  text-transform: uppercase; }
+
 .title {
   color: #eee;
   font-size: 2rem;
@@ -129,9 +134,9 @@ body {
 
 .character__section {
   float: left;
-  width: 40%;
   border: 2px solid #333; }
   .character__section--info {
+    width: 40%;
     height: 26rem;
     margin-right: 3px; }
   .character__section--attributes {
@@ -149,6 +154,13 @@ body {
     width: 66.2%;
     margin-top: -16.5rem;
     height: 16.5rem; }
+  .character__section--talents {
+    width: 55%;
+    margin-right: 3px;
+    margin-top: 3px; }
+  .character__section--abilities {
+    width: 44.3%;
+    margin-top: 3px; }
 
 .character__heading {
   background-color: #333; }
