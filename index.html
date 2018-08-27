@@ -148,15 +148,15 @@
                         <ul class="list">
                             <li class="item">
                                 <p class="attribute-name">Physical: </p>
-                                <div class="values value">9</div>
+                                <div class="values value" id="phys-def">9</div>
                             </li>
                             <li class="item">
                                 <p class="attribute-name">Spell: </p>
-                                <div class="values value">7</div>
+                                <div class="values value" id="ment-def">7</div>
                             </li>
                             <li class="item">
                                 <p class="attribute-name">Social: </p>
-                                <div class="values value">6</div>
+                                <div class="values value" id="soc-def">6</div>
                             </li>
                         </ul>
                         <h3 class="subtitle">armours</h3>
@@ -167,22 +167,26 @@
                             </li>
                             <li class="item">
                                 <p class="attribute-name">Mental: </p>
-                                <div class="values value">2</div>
+                                <div class="values value" id="ment-armour">2</div>
                             </li>
                         </ul>
                         <h3 class="subtitle">Health</h3>
                         <ul class="list">
                             <li class="item">
                                 <p class="attribute-name">Wound threshold</p>
-                                <div class="values value">10</div>
+                                <div class="values value" id="wound-thres">10</div>
                             </li>
                             <li class="item">
                                 <p class="attribute-name">Unconsciousness</p>
-                                <div class="values value">28</div>
+                                <div class="values value" id="uncon">28</div>
                             </li>
                             <li class="item">
                                 <p class="attribute-name">Death</p>
-                                <div class="values value">36</div>
+                                <div class="values value" id="death">36</div>
+                            </li>
+                            <li class="item">
+                                <p class="attribute-name">Recovery tests</p>
+                                <div class="values value" id="rec-tests">3</div>
                             </li>
                             <li class="item">
                                 <p class="attribute-name">Current damages</p>
@@ -192,24 +196,20 @@
                                 <p class="attribute-name">Wounds</p>
                                 <div class="values value">0</div>
                             </li>
-                            <li class="item">
-                                <p class="attribute-name">Recovery tests</p>
-                                <div class="values value">3</div>
-                            </li>
                         </ul>
                         <h3 class="subtitle">Others</h3>
                         <ul class="list">
                             <li class="item">
                                 <p class="attribute-name">Movement rate</p>
-                                <div class="values value">75/38</div>
+                                <div class="values value" id="mov-rate">75/38</div>
                             </li>
                             <li class="item">
                                 <p class="attribute-name">Carrying capacity</p>
-                                <div class="values value">70/140</div>
+                                <div class="values value" id="car-cap">70/140</div>
                             </li>
                             <li class="item">
                                 <p class="attribute-name">Initiative</p>
-                                <div class="values value">6</div>
+                                <div class="values value" id="init">6</div>
                             </li>
                         </ul>
                     </div>
@@ -349,5 +349,6 @@
         </div>
     </div>
     
+    <script src="js/index.js"></script>
 </body>
 </html>
