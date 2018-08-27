@@ -1,4 +1,5 @@
-const inputs = document.querySelectorAll('.character__input');
+const attValues = document.querySelectorAll('.att-value');
+const raceInput = document.getElementById('char-race');
 
 const characteristicsTable = {
     1: { defense: 2, movementRate: '25/13', carryingCapacity: '5/10', health: [3, 10, 19, 0.5], mentalArmour: 0 },
@@ -30,14 +31,35 @@ const characteristicsTable = {
     27: { defense: 13, movementRate: '170/85', carryingCapacity: '460/920', health: [15, 47, 54, 5], mentalArmour: 6 },
     28: { defense: 14, movementRate: '180/90', carryingCapacity: '535/1070', health: [16, 48, 55, 5], mentalArmour: 6 },
     29: { defense: 14, movementRate: '200/100', carryingCapacity: '600/1200', health: [16, 49, 56, 5], mentalArmour: 7 },
-    30: { defense: 15, movementRate: '220/110', carryingCapacity: '725/1450', health: [17, 51, 58, 5], mentalArmour: 7 },
-}
+    30: { defense: 15, movementRate: '220/110', carryingCapacity: '725/1450', health: [17, 51, 58, 5], mentalArmour: 7 }
+};
 
-console.log(characteristicsTable);
+const raceTable = {
+    dwarf: { karma: [6, 25, 10, 'd6'], speed: -2 },
+    elf: { karma: [5, 25, 10, 'd6'], speed: 1 },
+    human: { karma: [10, 40, 6, 'd8'], speed: 0 },
+    obsidiman: { karma: [5, 20, 10, 'd4'], speed: -3 },
+    ork: { karma: [10, 40, 7, 'd8'], speed: 2 },
+    troll: { karma: [6, 20, 10, 'd4'], speed: 0 },
+    tskrang: { karma: [5, 25, 8, 'd6'], speed: 0 },
+    windling: { karma: [15, 60, 5, 'd10'], speed: 2 }
+};
+
+// changes regarding to chosen race
+
+raceInput.addEventListener('change', () => {
+
+    // setting karma's values
+    console.log(raceInput.value.toLowerCase());
+    [document.getElementById('kar-cur').innerHTML, 
+    document.getElementById('kar-max').innerHTML, 
+    document.getElementById('kar-cost').innerHTML, 
+    document.getElementById('kar-dice').innerHTML] = raceTable[raceInput.value.toLowerCase()].karma;
+});
 
 // changes regarding to attributes values
 
-Array.from(inputs).forEach(el => el.addEventListener('change', e => {
+Array.from(attValues).forEach(el => el.addEventListener('change', e => {
 
     // Setting attributes' steps
 
@@ -49,7 +71,7 @@ Array.from(inputs).forEach(el => el.addEventListener('change', e => {
     switch (e.target.id) {
         case 'dexterity':
             document.getElementById('phys-def').innerHTML = characteristicsTable[value].defense;
-            document.getElementById('mov-rate').innerHTML = characteristicsTable[value].movementRate;
+            document.getElementById('mov-rate').innerHTML = characteristicsTable[parseInt(value) + raceTable[raceInput.value.toLowerCase()].speed].movementRate;
             document.getElementById('init').innerHTML = e.target.parentNode.children[1].innerHTML;
             break;
         case 'strength':
