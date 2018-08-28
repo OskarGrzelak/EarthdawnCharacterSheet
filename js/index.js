@@ -1,6 +1,21 @@
 const attValues = document.querySelectorAll('.att-value');
 const raceInput = document.getElementById('char-race');
 
+const talentName = document.getElementById('talent-name');
+const talentKarma = document.getElementById('talent-karma');
+const talentAction = document.getElementById('talent-action');
+const talentStrain = document.getElementById('talent-strain');
+const talentAttribute = document.getElementById('talent-attribute');
+const talentRank = document.getElementById('talent-rank');
+const addTalentButton = document.getElementById('add-talent');
+
+const abilityName = document.getElementById('ability-name');
+const abilityAction = document.getElementById('ability-action');
+const abilityStrain = document.getElementById('ability-strain');
+const abilityAttribute = document.getElementById('ability-attribute');
+const abilityRank = document.getElementById('ability-rank');
+const addAbilityButton = document.getElementById('add-ability');
+
 const characteristicsTable = {
     1: { defense: 2, movementRate: '25/13', carryingCapacity: '5/10', health: [3, 10, 19, 0.5], mentalArmour: 0 },
     2: { defense: 3, movementRate: '28/14', carryingCapacity: '8/15', health: [4, 11, 20, 0.5], mentalArmour: 0 },
@@ -95,5 +110,45 @@ Array.from(attValues).forEach(el => el.addEventListener('change', e => {
 
 }));
 
+// Adding new talents
+
+addTalentButton.addEventListener('click', () => {
+    let step;
+    if (talentAttribute.value !== 'nd') {
+        const index = Array.from(attValues).map(el => el.id).indexOf(talentAttribute.value);
+        step = parseInt(Array.from(attValues)[index].parentNode.children[1].innerHTML) + parseInt(talentRank.value);
+    }
+    const markup = `
+        <tr>
+            <td>${talentName.value}</td>
+            <td>${talentKarma.value}</td>
+            <td>${talentAction.value}</td>
+            <td>${talentStrain.value}</td>
+            <td>${talentAttribute.value}</td>
+            <td>${talentRank.value}</td>
+            <td>${talentAttribute.value !== 'nd' ? step : talentRank.value}</td>
+        </tr>`;
+    document.getElementById('add-talent-form').insertAdjacentHTML('beforebegin', markup);
+});
+
+// Adding new abilities
+
+addAbilityButton.addEventListener('click', () => {
+    let step;
+    if (abilityAttribute.value !== 'nd') {
+        const index = Array.from(attValues).map(el => el.id).indexOf(abilityAttribute.value);
+        step = parseInt(Array.from(attValues)[index].parentNode.children[1].innerHTML) + parseInt(abilityRank.value);
+    }
+    const markup = `
+        <tr>
+            <td>${abilityName.value}</td>
+            <td>${abilityAction.value}</td>
+            <td>${abilityStrain.value}</td>
+            <td>${abilityAttribute.value}</td>
+            <td>${abilityRank.value}</td>
+            <td>${abilityAttribute.value !== 'nd' ? step : abilityRank.value}</td>
+        </tr>`;
+    document.getElementById('add-ability-form').insertAdjacentHTML('beforebegin', markup);
+});
 
 

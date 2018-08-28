@@ -314,7 +314,16 @@
                               <td>2</td>
                               <td>8</td>
                             </tr>
-                          </table>
+                            <tr id="add-talent-form">
+                                <td><input class="character__input" type="text" id="talent-name" required></td>
+                                <td><select id="talent-karma"><option value="nie">Nie</option><option value="tak">Tak</option><option value="nd">ND</option></select></td>
+                                <td><select id="talent-action"><option value="nie">Nie</option><option value="tak">Tak</option></select></td>
+                                <td><input class="character__input" id="talent-strain" type="number" value="0"></td>
+                                <td><select id="talent-attribute"><option value="dexterity">Dexterity</option><option value="strength">strength</option><option value="toughness">Toughness</option><option value="perception">Perception</option><option value="willpower">Will power</option><option value="charisma">Charisma</option><option value="nd">ND</option></td>
+                                <td><input class="character__input" id="talent-rank" type="number" value="1"></td></td>
+                                <td><button id="add-talent">Add</button></td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
                 <div class="character__section character__section--abilities">
@@ -338,6 +347,14 @@
                               <td>DEX</td>
                               <td>2</td>
                               <td>8</td>
+                            </tr>
+                            <tr id="add-ability-form">
+                                <td><input class="character__input" type="text" id="ability-name" required></td>
+                                <td><select id="ability-action"><option value="nie">Nie</option><option value="tak">Tak</option></select></td>
+                                <td><input class="character__input" id="ability-strain" type="number" value="0"></td>
+                                <td><select id="ability-attribute"><option value="dexterity">Dexterity</option><option value="strength">strength</option><option value="toughness">Toughness</option><option value="perception">Perception</option><option value="willpower">Will power</option><option value="charisma">Charisma</option><option value="nd">ND</option></td>
+                                <td><input class="character__input" id="ability-rank" type="number" value="1"></td></td>
+                                <td><button id="add-ability">Add</button></td>
                             </tr>
                           </table>
                     </div>
