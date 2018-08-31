@@ -16,6 +16,9 @@ const abilityAttribute = document.getElementById('ability-attribute');
 const abilityRank = document.getElementById('ability-rank');
 const addAbilityButton = document.getElementById('add-ability');
 
+const rolls = document.querySelectorAll('.roll');
+const display = document.querySelector('.display');
+
 const characteristicsTable = {
     1: { defense: 2, movementRate: '25/13', carryingCapacity: '5/10', health: [3, 10, 19, 0.5], mentalArmour: 0 },
     2: { defense: 3, movementRate: '28/14', carryingCapacity: '8/15', health: [4, 11, 20, 0.5], mentalArmour: 0 },
@@ -58,6 +61,39 @@ const raceTable = {
     troll: { karma: [6, 20, 10, 'd4'], speed: 0 },
     tskrang: { karma: [5, 25, 8, 'd6'], speed: 0 },
     windling: { karma: [15, 60, 5, 'd10'], speed: 2 }
+};
+
+const diceTable = {
+    1: 'd4-2',
+    2: 'd4-1',
+    3: 'd4',
+    4: 'd6',
+    5: 'd8',
+    6: 'd10',
+    7: 'd12',
+    8: '2d6',
+    9: 'd8+d6',
+    10: 'd10+d6',
+    11: 'd10+d8',
+    12: '2d10',
+    13: 'd12+d10',
+    14: 'd20+d4',
+    15: 'd20+d6',
+    16: 'd20+d8',
+    17: 'd20+d10',
+    18: 'd20+d12',
+    19: 'd20+2d6',
+    20: 'd20+d8+d6',
+    21: 'd20+d10+d6',
+    22: 'd20+d10+d8',
+    23: 'd20+2d10',
+    24: 'd20+d12+d10',
+    25: 'd20+d10+d8+d4',
+    26: 'd20+d10+d8+d6',
+    27: 'd20+d10+2d8',
+    28: 'd20+2d10+d8',
+    29: 'd20+d12+d10+d8',
+    30: 'd20+d10+d8+2d6'
 };
 
 // changes regarding to chosen race
@@ -151,4 +187,44 @@ addAbilityButton.addEventListener('click', () => {
     document.getElementById('add-ability-form').insertAdjacentHTML('beforebegin', markup);
 });
 
+// Rolling dices
 
+const rollDice = dice => {
+    const results = [];
+    let sum = 0;
+    const dices = diceTable[dice].split('+');
+    dices.forEach(el => {
+        let result;
+        if(el[0]==='d') {
+            do {
+                result = Math.floor((Math.random()*parseInt(el.slice(1, el.length)) + 1));
+                sum += result;
+                results.push(result);
+            } while (result === parseInt(el.slice(1, el.length)));
+        } else {
+            const x = parseInt(el[0]);
+            for (let i = 0; i < x; i ++) {
+                do {
+                    result = Math.floor((Math.random()*parseInt(el.slice(2, el.length)) + 1));
+                    sum += result;
+                    results.push(result);
+                } while (result === parseInt(el.slice(2, el.length)));
+            };
+        };
+    });
+    results.push(sum);
+    return results;
+};
+
+const displayRoll = (dice, results) => {
+    const markup = `
+        <div>Roll ${diceTable[dice]}: ${results[results.length-1]}</div>
+        <div>Rolls: ${results.slice(0,results.length-1)}</div>
+    `;
+    display.insertAdjacentHTML('beforeend', markup);
+};
+
+Array.from(rolls).forEach(el => el.addEventListener('click', () => {
+    results = rollDice(el.innerHTML);
+    displayRoll(el.innerHTML, results);
+}));

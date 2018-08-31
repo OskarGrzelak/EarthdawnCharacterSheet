@@ -115,22 +115,24 @@ body {
     background-color: #3a3a3a; }
 
 .content-window {
+  display: flex;
   width: 100%;
-  padding: 3rem; }
+  padding: 3rem;
+  height: auto; }
 
 .user-window {
   float: left;
-  width: 75%;
+  width: 80%;
   background-color: #fff;
   border-right: 5px solid #333;
   padding: 2rem; }
 
 .dialogue-window {
   float: left;
-  width: 25%;
-  min-height: 100vh;
+  width: 20%;
   background-color: #fff;
-  padding: 2rem; }
+  padding: 2rem;
+  position: relative; }
 
 .character__section {
   float: left;
@@ -186,3 +188,11 @@ body {
   display: inline-block; }
   .character__feature:not(:last-child) {
     margin-right: 3rem; }
+
+.form {
+  position: absolute;
+  bottom: 2rem;
+  width: 100%; }
+  .form__input {
+    display: block;
+    width: calc(100% - 4rem); }
